@@ -1,0 +1,5 @@
+apply from: "${rootProject.rootDir}/common.gradle"
+project.ext.setAppOrLibDefaultConfig project
+dependencies {
+    api "com.google.android:flexbox:1.1.0"//流式布局
+}
