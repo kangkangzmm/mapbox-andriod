@@ -1,0 +1,7 @@
+include ':app', ':scrolllayout'
+include ':search'
+include ':app', ':zxing-lib'
+include ':app', ':picture_library', ':ucrop'
+include ':app', ':libWSLive'
+include ':libwebrtc'
+include ':app', ':rtc-chat'
