@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yinglan.scrolllayout.demo">
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
+
+
+
+    <!--        android:name=".UserInfo"-->
+
+    <application
+        android:name="com.yinglan.scrolllayout.demo.app.CIMApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/app"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="m"
+        tools:ignore="MissingClass">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name=".ThreeActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!--        <activity android:name=".SeekActivity"/>-->
+        <activity android:name=".loginActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DoubleTouchImageViewActivity"></activity>
+        <activity android:name=".ShowInfoActivity"></activity>
+        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".PostImgWebView"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
+            android:exported="true"></activity>
+        <activity android:name=".DetilesActivity"></activity>
+        <activity android:name=".ArActivity"></activity>
+        <activity android:name=".SearchActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"></activity>
+        <activity android:name=".SearchDemoActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Other3rd"></activity>
+        <activity android:name=".SysActivity"></activity>
+        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".VideoActivity"></activity>
+        <activity android:name=".PicActivity"></activity>
+        <activity android:name=".PostPictureActivity"></activity>
+        <activity android:name=".UserinfoActivity"></activity>
+        <activity android:name=".EditUserInfoActivity"></activity>
+        <activity
+            android:name=".NaviRouteActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".LiveActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+        <activity android:name=".feature.X5WebViewActivity" />
+        <activity android:name=".feature.SystemWebViewActivity" />
+        <activity android:name=".feature.WebKitWebViewActivity" />
+        <activity android:name=".feature.X5FeatureActivity" />
+        <activity android:name=".feature.WebProcessActivity" android:process=":web"/>
+        <activity
+            android:name=".feature.VideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" /> <!-- zxing二维码扫描强制竖屏 -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+
+        <activity
+            android:name=".LauncherActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
+        </activity>
+
+        <activity android:name="com.yinglan.scrolllayout.demo.core.RtcMainActivity" />
+
+
+        <activity android:name=".activity.PicMainActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".activity.PictureSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.VideoSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.yinglan.scrolllayout.demo.core.voip.CallSingleActivity"
+            android:screenOrientation="fullSensor"
+            android:showOnLockScreen="true"
+            android:showWhenLocked="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="UnusedAttribute"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.kit.voip.single" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.yinglan.scrolllayout.demo.core.voip.CallMultiActivity"
+            android:screenOrientation="fullSensor"
+            android:showOnLockScreen="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.yinglan.scrolllayout.demo.cimactivity.LoginActivity" android:exported="true">
+        </activity>
+
+        <activity
+            android:name="com.yinglan.scrolllayout.demo.cimactivity.MessageActivity"
+            android:launchMode="singleTask"
+            />
+
+        <receiver android:name="com.yinglan.scrolllayout.demo.core.voip.VoipReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.voip.Receiver" />
+            </intent-filter>
+        </receiver>
+        <!-- 悬浮窗 -->
+        <service
+            android:name="com.yinglan.scrolllayout.demo.core.voip.FloatingVoipService"
+            android:exported="true" />
+
+
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt" >
+        </service>
+        <service android:name=".utils.X5ProcessInitService" android:process=":web"
+            android:exported="true"/>
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+
+
+        <!-- ****************************************CIM推送配置 begin*************************************** -->
+        <service
+            android:name="com.yinglan.scrolllayout.demo.farsunset.cim.sdk.android.CIMPushService"
+            android:exported="true"
+            android:process=":cimpush"
+            />
+
+        <provider
+            android:name="com.yinglan.scrolllayout.demo.farsunset.cim.sdk.android.CIMCacheProvider"
+            android:authorities="${applicationId}.cim.provider"
+            android:exported="false" />
+        <!-- ****************************************CIM推送配置 end*************************************** -->
+
+
+        <!--消息接受广播注册-->
+        <receiver android:name="com.yinglan.scrolllayout.demo.reveiver.CIMPushMessageReceiver" android:exported="true">
+            <intent-filter android:priority="0x7fffffff">
+                <!-- 网络变事件action targetVersion 24之前 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.farsunset.cim.NETWORK_CHANGED" />
+                <!-- 收到消息事件action -->
+                <action android:name="com.farsunset.cim.MESSAGE_RECEIVED" />
+                <!-- 发送sendBody完成事件action -->
+                <action android:name="com.farsunset.cim.SEND_FINISHED" />
+                <!--重新连接事件action -->
+                <action android:name="com.farsunset.cim.CONNECTION_RECOVERY" />
+                <!-- 连接关闭事件action -->
+                <action android:name="com.farsunset.cim.CONNECTION_CLOSED" />
+                <!-- 连接失败事件action -->
+                <action android:name="com.farsunset.cim.CONNECT_FAILED" />
+                <!-- 连接成功事件action-->
+                <action android:name="com.farsunset.cim.CONNECT_FINISHED" />
+                <!-- 收到replyBody事件action -->
+                <action android:name="com.farsunset.cim.REPLY_RECEIVED" />
+
+                <!-- 【可选】 一些常用的系统广播，增强pushService的复活机会-->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

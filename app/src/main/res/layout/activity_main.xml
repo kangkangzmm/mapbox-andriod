@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/android"
+    tools:context=".MainActivity">
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/main_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="37.788440000"
+        mapbox:mapbox_cameraTargetLng="-122.399855"
+        mapbox:mapbox_cameraZoom="12"/>
+
+    <com.yinglan.scrolllayout.ScrollLayout
+        android:id="@+id/scroll_down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.yinglan.scrolllayout.content.ContentListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/btnSeek"
+                android:background="@android:color/white">
+            </com.yinglan.scrolllayout.content.ContentListView>
+
+            <TextView
+                android:id="@+id/text_foot"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="点击或上滑打开" />
+
+            <TextView
+                android:id="@+id/tvSeek"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="200dp"
+                android:background="#FCFCFC"
+                android:gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="40px"
+                android:hint="搜索地点，查公交，找路线"/>
+
+
+
+            <EditText
+                android:id="@+id/etContent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="75dp"
+                android:layout_weight="1"
+                android:background="#FCFCFC"
+                android:hint="搜索11111"
+                android:lines="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/btnSeek"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="-3dp"
+                android:layout_marginLeft="290dp"
+                android:text="搜索" />
+
+
+
+
+        </RelativeLayout>
+
+    </com.yinglan.scrolllayout.ScrollLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_go_second"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="点击进入第二页面" />-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg" />
+    <include android:id="@+id/tabs_rg" layout="@layout/bottom_toobar" />
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/tabs_rg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="#dcdcdc"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/today_tab"-->
+<!--            style="@style/Custom.TabRadioButton"-->
+<!--            android:checked="true"-->
+<!--            android:drawableTop="@drawable/tab_sign_selector"-->
+<!--            android:text="首页" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/record_tab"-->
+<!--            style="@style/Custom.TabRadioButton"-->
+<!--            android:drawableTop="@drawable/tab_record_selector"-->
+<!--            android:text="记录" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/contact_tab"-->
+<!--            style="@style/Custom.TabRadioButton"-->
+<!--            android:drawableTop="@drawable/tab_contact_selector"-->
+<!--            android:text="web" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/settings_tab"-->
+<!--            style="@style/Custom.TabRadioButton"-->
+<!--            android:drawableTop="@drawable/tab_setting_selector"-->
+<!--            android:text="设置" />-->
+<!--        <RadioButton-->
+<!--            android:id="@+id/settings_login"-->
+<!--            style="@style/Custom.TabRadioButton"-->
+<!--            android:drawableTop="@drawable/tab_setting_selector"-->
+<!--            android:text="登录" />-->
+<!--    </RadioGroup>-->
+
+
+
+    <TextView
+        android:id="@+id/walking_time_to_vechicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/walking_icon"
+        app:layout_constraintTop_toTopOf="@+id/walking_icon"
+        tools:text="20 min," />
+    <TextView
+        android:id="@+id/vehicle_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/vehicle_number"
+        app:layout_constraintTop_toBottomOf="@id/vehicle_number"
+        tools:text="72 Townsend st, San Francisco" />
+    <ImageView
+        android:id="@+id/vechicle_type_imageview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/scooter_icon"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <TextView
+        android:id="@+id/vehicle_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/vechicle_type_imageview"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#58" />
+    <ImageView
+        android:id="@+id/walking_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_directions_walk"
+        app:layout_constraintStart_toStartOf="@+id/vehicle_address"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_address" />
+    <TextView
+        android:id="@+id/mileage_walking_distance_to_vechicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/walking_time_to_vechicle"
+        app:layout_constraintTop_toTopOf="@+id/walking_time_to_vechicle"
+        tools:text=".6 mi" />
+
+
+
+
+
+
+
+</RelativeLayout>

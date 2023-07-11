@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/msearch_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:scrollbars="none"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            >
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:textColor="@color/huise"-->
+<!--                android:text="@string/search_all"-->
+<!--                />-->
+
+
+            <include
+                android:id="@+id/shadowview"
+                layout="@layout/shadow_set_layout" />
+
+            <com.yinglan.scrolllayout.demo.search.FlowLayout
+                android:padding="10dp"
+                android:id="@+id/id_flowlayouthot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.yinglan.scrolllayout.demo.search.FlowLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/huise"
+                    android:text="@string/search_lately"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/heise"
+                    android:id="@+id/tvclearolddata"
+                    android:text="@string/search_clear"
+                    android:background="@drawable/sousuo_clearolddata_shap"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <include
+                android:id="@+id/shadowview"
+                layout="@layout/shadow_set_layout" />
+
+            <com.yinglan.scrolllayout.demo.search.selfSearchGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gridviewolddata"
+                android:numColumns="3"
+                android:gravity="center"
+                android:padding="10dp"
+                >
+
+            </com.yinglan.scrolllayout.demo.search.selfSearchGridView>
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                android:padding="3dip"
+                android:stretchColumns="1">
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="3dip"
+                        android:text="Gender"
+                        android:textStyle="bold"></TextView>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Female"></RadioButton>
+
+                        <RadioButton
+                            android:id="@+id/radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="male"></RadioButton>
+
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="3dip"
+                        android:text="类型"
+                        android:textStyle="bold"></TextView>
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/color"></Spinner>
+
+                </TableRow>
+            </TableLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--    <ListView-->
+<!--        android:id="@+id/searchlist_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+    <com.yinglan.scrolllayout.content.ContentListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnSeek"
+        android:background="@android:color/white">
+    </com.yinglan.scrolllayout.content.ContentListView>
+
+</LinearLayout>

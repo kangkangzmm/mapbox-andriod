@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="top_search_bg_nt">#ff145f8f</color>
+    <color name="huise">#c2979797</color>
+    <color name="transparent">#00000000</color>
+    <color name="content_text_readed">#ff828282</color>
+    <color name="heise">#353232</color><!--黑色 -->
+
+
+
+    <color name="bg_huise_ff">#d6d6d6</color><!--灰色 -->
+
+
+    <color name="bg_huise_a">#f2f2f2</color><!--灰色 -->
+    <color name="bg_huise_b">#cacaca</color><!--灰色边框 -->
+    <color name="bg_lvse_a">#f2f6e9</color><!-- 绿色 -->
+    <color name="bg_lvse_b">#b8ce8e</color><!--绿色边框 -->
+    <color name="bg_lanse_a">#e8f6f6</color><!--蓝色 -->
+    <color name="bg_lanse_b">#92dbde</color><!--蓝色边框 -->
+    <color name="bg_fense_a">#f9eaeb</color><!--粉色 -->
+    <color name="bg_fense_b">#fba1a8</color><!--粉色边框 -->
+    <color name="bg_chengse_a">#f8f2ec</color><!--橙色 -->
+    <color name="bg_chengse_b">#f9c189</color><!--橙色边框 -->
+
+
+
+
+    <!--经典 收藏 -->
+    <color name="mlcred">#f34336</color><!--red -->
+    <color name="mlcpink">#e81f63</color><!--pink -->
+    <color name="mlcheihui">#374046</color><!--黑灰 -->
+    <color name="mlcpurple">#9c28af</color><!--purple -->
+    <color name="mlcdeeppurple">#673ab6</color><!--deep purple -->
+    <color name="mlcindigo">#3f51b4</color><!--indigo -->
+    <color name="mlcblue">#2296f2</color><!--blue -->
+    <color name="mlclightblue">#04a9f3</color><!--light blue -->
+    <color name="mlccyan">#02bcd4</color><!--cyan -->
+    <color name="mlcteal">#029789</color><!--teal -->
+    <color name="mlcgreen">#4cae50</color><!--green -->
+    <color name="mlclightgreen">#8bc24a</color><!--light green -->
+    <color name="mlclime">#cddc3a</color><!--lime -->
+    <color name="mlcyellow">#ffeb3c</color><!--yellow -->
+    <color name="mlcamber">#ffc109</color><!--amber -->
+    <color name="mlcorange">#fe9802</color><!--orange -->
+    <color name="mlcodeeprange">#fe5723</color><!--deep orange -->
+    <color name="mlcbrown">#795548</color><!--brown -->
+    <color name="mlcgrey">#9f9f9f</color><!--grey -->
+    <color name="mlcbluegrey">#607d8b</color><!--blue grey -->
+    <color name="colorAccent_green">#78F645</color>
+
+
+    <!--红橙黄绿青蓝紫-->
+    <color name="mlcred2">#ffea4f15</color><!--红色 -->
+    <color name="mlcchengse">#ff9c00</color><!--橙 -->
+    <color name="mlchuangse">#ff987b</color><!--黄色 -->
+    <color name="mlclvse">#00ff00</color><!--绿色 -->
+    <color name="mlcqingse">#00ffff</color><!--青色 -->
+    <color name="mlclanse">#0000ff</color><!--蓝色 -->
+    <color name="mlcfenhongse">#ff85c5</color><!--粉红色 -->
+
+
+
+    <color name="color_minefragment_top">#0066cc</color>
+
+
+    <color name="materialGrey">#F5F5F5</color>
+    <color name="materialDarkGrey">#DFDFDF</color>
+    <color name="mapboxWhite">#FFFFFF</color>
+
+    <color name="mapboxGreenDark">#269561</color>
+    <color name="mapboxGreen">#33c377</color>
+    <color name="mapboxGreenLight">#afdec5</color>
+    <color name="mapboxGreenFaint">#e8f5ee</color>
+
+    <color name="mapboxBlue">#4264fb</color>
+    <color name="mapboxBlueDark">#314ccd</color>
+    <color name="mapboxBlueLight">#aab7ef</color>
+    <color name="mapboxBlueFaint">#edf0fd</color>
+
+    <color name="mapboxGrayDark">#273d56</color>
+    <color name="mapboxGrayDark10">#476483</color>
+    <color name="mapboxGrayExtraDark">#2d3c4f</color>
+    <color name="mapboxGray">#607d9c</color>
+    <color name="mapboxGrayLight">#c6d2e1</color>
+    <color name="mapboxGrayFaint">#f4f7fb</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="app_color_grey">#393a3e</color>
+    <color name="app_color_black">#000000</color>
+    <color name="app_color_f6">#f6f6f6</color>
+    <color name="app_color_fa">#fafafa</color>
+    <color name="app_color_divider">#B6B6B6</color>
+    <color name="app_color_c51">#f94c51</color>
+    <color name="app_color_green">#43c117</color>
+    <color name="app_color_53575e">#53575e</color>
+    <color name="app_color_transparent">#00000000</color>
+    <color name="app_color_white">#FFFFFF</color>
+    <color name="app_color_white_transparent">#E0DBDBDB</color>
+    <color name="app_color_blue">#7D7DFF</color>
+    <color name="app_color_9b">#9b9b9b</color>
+    <color name="app_color_e0ff6100">#E0FF6100</color>
+    <color name="app_color_red">#FF0000</color>
+
+
+    <color name="main_color">#ffda44</color>
+    <color name="title">#2e2e2e</color>
+    <color name="white">#ffffffff</color>
+    <color name="sub_title">#ababab</color>
+    <color name="dialog_background_color">#923d3a3a</color>
+    <color name="black">#000000</color>
+
+
+</resources>

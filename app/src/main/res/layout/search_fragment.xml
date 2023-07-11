@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    https://blog.csdn.net/weixin_45534711/article/details/120554690参考地址-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/iv_searchback"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:orientation="horizontal"
+
+                android:id="@+id/linear_searchitem">
+
+                <EditText
+                    android:id="@+id/et_searchtext"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:hint="输入关键字搜索"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@null"
+                    android:textSize="18sp"
+                    android:drawableLeft="@android:drawable/ic_menu_search"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+                    />
+                <Button
+                    android:id="@+id/btn_search_sm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="扫码"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:text="搜索历史"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:gravity="center"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_searchhistory"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tv_clearsearch"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:text="清空搜索历史"-->
+<!--                android:textSize="15sp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"/>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

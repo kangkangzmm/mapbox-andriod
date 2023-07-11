@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/other_toolbar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:textColor="@color/title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="上传"
+            android:textColor="@color/title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="本地相册"
+            android:textColor="@color/title"
+            android:textSize="17.1sp" />
+
+    </RelativeLayout>
+
+    <com.yinglan.scrolllayout.demo.view.SquareRelativeLayout
+        android:id="@+id/rl_video_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0.5dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="@dimen/place_holder_size"
+            android:layout_height="@dimen/place_holder_size"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_place_holder_7" />
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_empty"
+            android:layout_centerHorizontal="true"
+            android:text="@string/upload_video"
+            android:textColor="@color/sub_title" />
+
+    </com.yinglan.scrolllayout.demo.view.SquareRelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_video_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_video_play"
+        android:background="#fff" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/rl_video_play"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_new_add_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:background="#f2f2f2"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_new_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <include layout="@layout/dialog_loading" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_circle_progress"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_progress"
+        android:visibility="gone">
+        <!--环形进度条-->
+        <com.yinglan.scrolllayout.demo.view.KbWithWordsCircleProgressBar
+            android:id="@+id/circle_progress"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_with_shadow_height"
+        android:layout_below="@id/rl_title"
+        android:background="@drawable/img_home_toolbar_shadow" />
+</RelativeLayout>

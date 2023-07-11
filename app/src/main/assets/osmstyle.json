@@ -1,0 +1,206 @@
+{
+	"version": 8,
+	"sprite": "http://kangkangtk.gnway.cc/data/icon/sprite",
+	"glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+	"sources": {
+		"vector": {
+			"type": "raster",
+			"tiles": [
+				"http://ak.dynamic.t0.tiles.virtualearth.net/comp/ch/{quadkey}?mkt=zh-CN&it=A,G,L&og=819&n=z"
+
+			],
+			"tileSize": 256
+		},
+		"rmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/buildingvector/roadtile/{z}/{x}/{y}"]
+		},
+		"emap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/themelayer/buildingtile/{z}/{x}/{y}"]
+		},
+		"bmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/themelayer/osmbuildingtile/{z}/{x}/{y}"]
+		},
+		"cmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/themelayer/osmlandusetile/{z}/{x}/{y}"]
+		},
+		"dmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/themelayer/osmnaturaltile/{z}/{x}/{y}"]
+		},
+		"fmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/themelayer/selectosmnaturalftile/{z}/{x}/{y}"]
+		},
+		"jmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/zgis/themelayer/osmroadtile/{z}/{x}/{y}"]
+		},
+		"kmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/mvt/poidatatiles/{z}/{x}/{y}"]
+		},
+		"tmap": {
+			"type": "vector",
+			"tiles": ["http://kangkangtk.gnway.cc/attachment/houseinfotiles/{z}/{x}/{y}"]
+		}
+	},
+	"layers": [
+		{
+			"id": "vector",
+			"type": "raster",
+			"source": "vector",
+			"layout": {
+				"visibility": "visible"
+			},
+			"minzoom": 0,
+			"maxzoom": 22
+		},{
+			"id": "custom-go-vector-tile-layer_poi",
+			"type": "symbol",
+			"source": "kmap",
+			"source-layer": "kmap",
+			"minzoom": 12,
+			"layout": {
+				"icon-image": "dot-11",
+				"text-size": 16,
+				"text-max-angle": 30,
+				"text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+				"symbol-placement": "point",
+				"text-padding": 0.5,
+				"text-rotation-alignment": "viewport",
+				"text-pitch-alignment": "viewport",
+				"text-field": ["coalesce", ["get", "name"]],
+				"text-letter-spacing": 0.01
+			},
+			"paint": {
+				"text-color": "hsl(212, 8%, 84%)",
+				"text-halo-color": "hsl(216, 43%, 0%)",
+				"text-halo-width": 1,
+				"icon-opacity": ["step", ["zoom"], 1, 8, 0],
+				"text-halo-blur":1
+			}
+		},{
+			"id": "poi-img",
+			"type": "symbol",
+			"source": "kmap",
+			"source-layer": "kmap",
+			"minzoom": 0,
+			"maxzoom": 24,
+			" paint": {
+			},
+			"layout": {
+				"icon-image": "us-highway-alternate-2",
+				"icon-size": 1
+			}
+		},{
+			"id": "lineline",
+			"type": "line",
+			"source": "tmap",
+			"source-layer": "tmap",
+			"filter": ["==", "type", "xian"],
+			"paint": {
+				"line-width": [
+					"interpolate", ["exponential", 1.5],
+					["zoom"],
+					10,
+					1,
+					18,
+					10
+				],
+				"line-color": "hsl(249, 58%, 70%)"
+
+			},
+			"layout": {
+				"line-join": [
+					"step", ["zoom"],
+					"miter",
+					14,
+					"round"
+				],
+				"line-cap": [
+					"step", ["zoom"],
+					"miter",
+					14,
+					"round"
+				]
+			}
+		},
+		{
+			"id": "custom-go-vector-tile-layeraaq",
+			"type": "symbol",
+			"source": "tmap",
+			"source-layer": "tmap",
+			"minzoom": 0,
+			"filter": ["==", "type", "dian"],
+			"layout": {
+				"icon-image": "mx-federal-2",
+				"icon-size": 1
+			},
+			"paint": {
+			}
+		},
+		{
+			"id": "aroads",
+			"type": "fill",
+			"source": "tmap",
+			"source-layer": "tmap",
+			"filter": ["==", "type", "mian"],
+			"paint": {
+				"fill-color": "hsl(170, 37%, 11%)",
+				"fill-opacity": 0.6
+			}
+		},{
+			"id": "road",
+			"type": "fill",
+			"source": "rmap",
+			"source-layer": "rmap",
+			"paint": {"fill-color": "hsl(170, 37%, 11%)"}
+		},{
+			"id": "osmroad",
+			"type": "line",
+			"source": "jmap",
+			"source-layer": "jmap",
+			"paint": {
+				"line-opacity": 0.6,
+				"line-color": "hsl(170, 37%, 11%)",
+				"line-width": 2
+			}
+		},{
+			"id": "smlanduse",
+			"type": "fill",
+			"source": "cmap",
+			"source-layer": "cmap",
+			"paint": {"fill-color": "hsl(170, 37%, 11%)"}
+		},{
+			"id": "osmnatural",
+			"type": "fill",
+			"source": "dmap",
+			"source-layer": "dmap",
+			"paint": {"fill-color": "hsl(100, 37%, 50%)"}
+		},{
+			"id": "osmd3building",
+			"type": "fill-extrusion",
+			"source": "bmap",
+			"source-layer": "bmap",
+			"minzoom": 12,
+			"maxzoom": 22,
+			"paint": {
+				"fill-extrusion-color": [
+					"interpolate",
+					["exponential", 1],
+					["get", "code"],
+					0,
+					"hsl(180, 41%, 24%)",
+					15,
+					"hsl(180, 94%, 65%)"
+				],
+				"fill-extrusion-height": ["*", 0.1, ["get", "code"]],
+				"fill-extrusion-opacity": 0.9
+			}
+		}
+	]
+}
