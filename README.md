@@ -9,7 +9,6 @@
 ![1](https://github.com/yingLanNull/ScrollLayout/blob/master/Show/Screenshot18.png)
 ![2](https://github.com/yingLanNull/ScrollLayout/blob/master/Show/Screenshot42.png)
 ![3](https://github.com/yingLanNull/ScrollLayout/blob/master/Show/Screenshot58.png)
-![3](https://github.com/yingLanNull/ScrollLayout/blob/master/Show/n.png)
 
 
 ## Demo 下载APK体验
