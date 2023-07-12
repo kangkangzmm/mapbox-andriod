@@ -7,7 +7,7 @@
 
 ## Similar 类似使用
 ![1](https://github.com/kangkangzmm/mapbox-andriod/blob/main/Show/home.jpg)
-![2](https://github.com/kangkangzmm/mapbox-andriod/blob/main/Show/nva.jpg)
+![2](https://github.com/kangkangzmm/mapbox-andriod/blob/main/Show/point.jpg)
 ![3](https://github.com/kangkangzmm/mapbox-andriod/blob/main/Show/nva.jpg)
 ![2](https://github.com/kangkangzmm/mapbox-andriod/blob/main/Show/scorroll.jpg)
 ![3](https://github.com/kangkangzmm/mapbox-andriod/blob/main/Show/webviewscorroll.jpg)
